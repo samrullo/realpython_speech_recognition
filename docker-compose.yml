@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  telegram_bot:
+    container_name: "speech_recognition_bot"
+    build:
+      context: ./samrullo_speech_recognizer_telegram_bot
+      dockerfile: Dockerfile
+    networks:
+      - speech-recognition-networks
+networks:
+  speech-recognition-networks:
+    driver: bridge
